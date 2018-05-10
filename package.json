@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-github",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "GitHub automation driven by headless chrome.",
   "main": "index.js",
   "repository": "transitive-bullshit/puppeteer-github",
