@@ -1,0 +1,27 @@
+{
+  "name": "puppeteer-github",
+  "version": "0.0.1",
+  "description": "GitHub automation driven by headless chrome.",
+  "main": "index.js",
+  "repository": "transitive-bullshit/puppeteer-github",
+  "author": "Travis Fischer <travis@automagical.ai>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava -v && standard"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "puppeteer",
+    "email"
+  ],
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "ow": "^0.3.0",
+    "puppeteer": "^1.4.0"
+  }
+}
