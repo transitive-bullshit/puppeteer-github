@@ -50,6 +50,11 @@ class PuppeteerGitHub {
     this._isAuthenticated = false
     this._user = null
   }
+
+  async close () {
+    const browser = await this.browser()
+    return browser.close()
+  }
 }
 
 module.exports = PuppeteerGitHub
