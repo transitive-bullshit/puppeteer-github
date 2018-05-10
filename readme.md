@@ -38,7 +38,8 @@ await github.close()
 
 - [puppeteer-github-cli](https://github.com/transitive-bullshit/puppeteer-github-cli) - CLI for this module.
 - [puppeteer-email](https://github.com/transitive-bullshit/puppeteer-email) - Email automation driven by headless chrome.
-
+- [puppeteer](https://github.com/GoogleChrome/puppeteer) - Headless Chrome Node API.
+- [awesome-puppeteer](https://github.com/transitive-bullshit/awesome-puppeteer) - A curated list of awesome puppeteer resources.
 
 ## License
 
