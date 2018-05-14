@@ -23,9 +23,13 @@
     "standard": "^11.0.0"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "delay": "^2.0.0",
     "get-repository-url": "^1.0.1",
     "ow": "^0.3.0",
+    "p-retry": "^2.0.0",
     "parse-github-url": "^1.0.2",
-    "puppeteer": "^1.4.0"
+    "puppeteer": "^1.4.0",
+    "puppeteer-email": "^0.0.5"
   }
 }

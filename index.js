@@ -1,10 +1,14 @@
 'use strict'
 
+const getRepositoryUrl = require('get-repository-url')
 const puppeteer = require('puppeteer')
 
 const signup = require('./lib/signup')
 const signin = require('./lib/signin')
 const signout = require('./lib/signout')
+const starRepo = require('./lib/star-repo')
+const unstarRepo = require('./lib/unstar-repo')
+const verifyEmail = require('./lib/verify-email')
 
 /**
  * @param {Object} [opts={ }] - Options
@@ -48,11 +52,13 @@ class PuppeteerGitHub {
   /**
    * Automates the creation of a new GitHub account.
    *
-   * @param {Object} user - User details for new account
+   * @param {object} user - User details for new account
    * @param {string} user.username - Username
    * @param {string} user.email - Email
    * @param {string} user.password - Password
-   * @param {Object} [opts={ }] - Options
+   * @param {object} [opts={ }] - Options
+   * @param {boolean} [opts.verifyEmail] - Whether or not to verify email
+   * @param {string} [opts.emailPassword] - Email password for verification
    * @returns {Promise}
    */
   async signup (user, opts = { }) {
@@ -62,6 +68,10 @@ class PuppeteerGitHub {
     await signup(browser, user, opts)
     this._isAuthenticated = true
     this._user = user
+
+    if (opts.verifyEmail) {
+      await this.verifyEmail(opts)
+    }
   }
 
   /**
@@ -99,14 +109,48 @@ class PuppeteerGitHub {
     this._user = null
   }
 
-  async starNpmPackage (pkg) {
+  /**
+   * Verifies the authenticated GitHub account's email via pupeteer-email.
+   *
+   * @param {Object} opts - Options
+   * @param {string} opts.emailPassword - Email password for verification
+   * @param {string} [opts.email] - Email verification (defaults to user's GitHub email)
+   * @returns {Promise}
+   */
+  async verifyEmail (opts) {
+    if (!opts.emailPassword || !opts.emailPassword.length) {
+      throw new Error('missing required "email-password" for email verification')
+    }
+
+    const browser = await this.browser()
+    await verifyEmail(browser, {
+      email: opts.email || this.user.email,
+      password: opts.emailPassword
+    }, opts)
+  }
+
+  async starPackage (pkgName) {
+    const url = await getRepositoryUrl(pkgName)
+    return this.starRepo(url)
+  }
+
+  async unstarPackage (pkgName) {
+    const url = await getRepositoryUrl(pkgName)
+    return this.unstarRepo(url)
   }
 
   async starRepo (repo) {
+    const browser = await this.browser()
+    return starRepo(browser, repo)
+  }
+
+  async unstarRepo (repo) {
+    const browser = await this.browser()
+    return unstarRepo(browser, repo)
   }
 
   /**
-   * Closes the underlying Puppeteer browser, effectively ending this session.
+   * Closes the underlying browser instance, effectively ending this session.
    *
    * @returns {Promise}
    */
