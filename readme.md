@@ -23,6 +23,7 @@ const username = 'XXX'
 const password = 'XXX'
 
 await github.signin({ username, password })
+await github.starRepo('facebook/react')
 await github.close()
 ```
 
@@ -68,7 +69,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 #### browser
 
-Puppeteer Browser instance in use.
+Puppeteer Browser instance to use.
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** 
 
@@ -92,7 +93,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 Signs into an existing GitHub account.
 
-Note: username or email are required.
+Note: either username or email is required.
 
 **Parameters**
 

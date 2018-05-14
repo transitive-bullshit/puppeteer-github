@@ -37,7 +37,7 @@ class PuppeteerGitHub {
   get user () { return this._user }
 
   /**
-   * Puppeteer Browser instance in use.
+   * Puppeteer Browser instance to use.
    *
    * @return {Promise<Object>}
    */
@@ -77,7 +77,7 @@ class PuppeteerGitHub {
   /**
    * Signs into an existing GitHub account.
    *
-   * Note: username or email are required.
+   * Note: either username or email is required.
    *
    * @param {Object} user - User details for new account
    * @param {string} [user.username] - Username
