@@ -39,7 +39,7 @@ class PuppeteerGitHub {
   /**
    * Puppeteer Browser instance in use.
    *
-   * @returns {Promise<Object>} - Puppeteer Browser instance
+   * @return {Promise<Object>}
    */
   async browser () {
     if (!this._browser) {
@@ -59,7 +59,7 @@ class PuppeteerGitHub {
    * @param {object} [opts={ }] - Options
    * @param {boolean} [opts.verifyEmail] - Whether or not to verify email
    * @param {string} [opts.emailPassword] - Email password for verification
-   * @returns {Promise}
+   * @return {Promise}
    */
   async signup (user, opts = { }) {
     if (this._isAuthenticated) throw new Error('"signup" requires no authentication')
@@ -84,7 +84,7 @@ class PuppeteerGitHub {
    * @param {string} [user.email] - Email
    * @param {string} user.password - Password
    * @param {Object} [opts={ }] - Options
-   * @returns {Promise}
+   * @return {Promise}
    */
   async signin (user, opts = { }) {
     if (this._isAuthenticated) throw new Error('"signin" requires no authentication')
@@ -97,8 +97,7 @@ class PuppeteerGitHub {
 
   /**
    * Signs out of the currently authenticated GitHub account.
-   *
-   * @returns {Promise}
+   * @return {Promise}
    */
   async signout () {
     if (!this._isAuthenticated) throw new Error('"signout" requires authentication')
@@ -115,7 +114,7 @@ class PuppeteerGitHub {
    * @param {Object} opts - Options
    * @param {string} opts.emailPassword - Email password for verification
    * @param {string} [opts.email] - Email verification (defaults to user's GitHub email)
-   * @returns {Promise}
+   * @return {Promise}
    */
   async verifyEmail (opts) {
     if (!opts.emailPassword || !opts.emailPassword.length) {
@@ -129,21 +128,58 @@ class PuppeteerGitHub {
     }, opts)
   }
 
+  /**
+   * Stars an npm package's github repository.
+   *
+   * @param {string} pkgName - NPM package name.
+   * @return {Promise}
+   *
+   * @example
+   * const gh = new PuppeteerGitHub()
+   * await gh.signin(...)
+   * await gh.starPackage('react')
+   * await gh.close()
+   */
   async starPackage (pkgName) {
     const url = await getRepositoryUrl(pkgName)
     return this.starRepo(url)
   }
 
+  /**
+   * Unstars an npm package's github repository.
+   *
+   * @param {string} pkgName - NPM package name.
+   * @return {Promise}
+   */
   async unstarPackage (pkgName) {
     const url = await getRepositoryUrl(pkgName)
     return this.unstarRepo(url)
   }
 
+  /**
+   * Stars a github repository.
+   *
+   * @param {string} pkgName - NPM package name.
+   * @return {Promise}
+   *
+   * @example
+   * const gh = new PuppeteerGitHub()
+   * await gh.signin(...)
+   * await gh.starRepo('avajs/ava')
+   * await gh.starRepo('https://github.com/facebook/react')
+   * await gh.close()
+   */
   async starRepo (repo) {
     const browser = await this.browser()
     return starRepo(browser, repo)
   }
 
+  /**
+   * Unstars a github repository.
+   *
+   * @param {string} pkgName - NPM package name.
+   * @return {Promise}
+   */
   async unstarRepo (repo) {
     const browser = await this.browser()
     return unstarRepo(browser, repo)
@@ -152,7 +188,7 @@ class PuppeteerGitHub {
   /**
    * Closes the underlying browser instance, effectively ending this session.
    *
-   * @returns {Promise}
+   * @return {Promise}
    */
   async close () {
     const browser = await this.browser()
