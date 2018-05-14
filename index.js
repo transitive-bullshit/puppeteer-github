@@ -11,6 +11,8 @@ const unstarRepo = require('./lib/unstar-repo')
 const verifyEmail = require('./lib/verify-email')
 
 /**
+ * [GitHub](https://github.com) automation driven by headless chrome.
+ *
  * @param {Object} [opts={ }] - Options
  * @param {Object} [opts.browser] - Puppeteer browser instance to use
  * @param {Object} [opts.puppeteer] - Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
