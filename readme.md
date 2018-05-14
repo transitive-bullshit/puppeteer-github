@@ -21,11 +21,9 @@ const PuppeteerGitHub = require('puppeteer-github')
 
 const github = new PuppeteerGitHub()
 
-const username = 'XXX'
-const password = 'XXX'
-
-await github.signin({ username, password })
+await github.signin({ username: 'xxx', password: 'xxx' })
 await github.starRepo('facebook/react')
+
 await github.close()
 ```
 
