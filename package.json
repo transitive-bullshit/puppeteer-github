@@ -20,7 +20,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "standard": "^11.0.0",
-    "update-markdown-jsdoc": "^0.0.1"
+    "update-markdown-jsdoc": "^1.0.1"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

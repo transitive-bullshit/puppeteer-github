@@ -47,7 +47,7 @@ await github.close()
     -   [unstarRepo](#unstarrepo)
     -   [close](#close)
 
-### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L20-L199)
+### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L20-L199)
 
 [GitHub](https://github.com) automation driven by headless chrome.
 
@@ -59,7 +59,7 @@ Type: `function (opts)`
 
 * * *
 
-#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L32-L32)
+#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L32-L32)
 
 Whether or not this instance is authenticated with GitHub.
 
@@ -67,7 +67,7 @@ Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 * * *
 
-#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L39-L39)
+#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L39-L39)
 
 Authenticated user if authenticated with GitHub.
 
@@ -75,7 +75,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 * * *
 
-#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L46-L52)
+#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L46-L52)
 
 Puppeteer Browser instance to use.
 
@@ -83,7 +83,7 @@ Type: `function ()`
 
 * * *
 
-#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L66-L77)
+#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L66-L77)
 
 Automates the creation of a new GitHub account.
 
@@ -99,7 +99,7 @@ Type: `function (user, opts): Promise`
 
 * * *
 
-#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L91-L98)
+#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L91-L98)
 
 Signs into an existing GitHub account.
 
@@ -115,7 +115,7 @@ Type: `function (user, opts): Promise`
 
 * * *
 
-#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L104-L111)
+#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L104-L111)
 
 Signs out of the currently authenticated GitHub account.
 
@@ -123,7 +123,7 @@ Type: `function (): Promise`
 
 * * *
 
-#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L121-L131)
+#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L121-L131)
 
 Verifies the authenticated GitHub account's email via pupeteer-email.
 
@@ -135,7 +135,7 @@ Type: `function (opts): Promise`
 
 * * *
 
-#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L145-L148)
+#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L145-L148)
 
 Stars an npm package's github repository.
 
@@ -154,7 +154,7 @@ await gh.close()
 
 * * *
 
-#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L156-L159)
+#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L156-L159)
 
 Unstars an npm package's github repository.
 
@@ -164,7 +164,7 @@ Type: `function (pkgName): Promise`
 
 * * *
 
-#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L174-L177)
+#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L174-L177)
 
 Stars a github repository.
 
@@ -184,7 +184,7 @@ await gh.close()
 
 * * *
 
-#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L185-L188)
+#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L185-L188)
 
 Unstars a github repository.
 
@@ -194,7 +194,7 @@ Type: `function (repo): Promise`
 
 * * *
 
-#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/f94d2a0f33921f77a63d31ebc717461df2ba2572/index.js#L195-L198)
+#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/9b76a4ef17c386b7debc5af0efe45636274e41ab/index.js#L195-L198)
 
 Closes the underlying browser instance, effectively ending this session.
 
