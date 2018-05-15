@@ -34,18 +34,18 @@ await github.close()
 #### Table of Contents
 
 -   [PuppeteerGitHub](#puppeteergithub)
-    -   [PuppeteerGitHub.isAuthenticated](#puppeteergithubisauthenticated)
-    -   [PuppeteerGitHub.user](#puppeteergithubuser)
-    -   [PuppeteerGitHub.browser](#puppeteergithubbrowser)
-    -   [PuppeteerGitHub.signup](#puppeteergithubsignup)
-    -   [PuppeteerGitHub.signin](#puppeteergithubsignin)
-    -   [PuppeteerGitHub.signout](#puppeteergithubsignout)
-    -   [PuppeteerGitHub.verifyEmail](#puppeteergithubverifyemail)
-    -   [PuppeteerGitHub.starPackage](#puppeteergithubstarpackage)
-    -   [PuppeteerGitHub.unstarPackage](#puppeteergithubunstarpackage)
-    -   [PuppeteerGitHub.starRepo](#puppeteergithubstarrepo)
-    -   [PuppeteerGitHub.unstarRepo](#puppeteergithubunstarrepo)
-    -   [PuppeteerGitHub.close](#puppeteergithubclose)
+    -   [isAuthenticated](#isauthenticated)
+    -   [user](#user)
+    -   [browser](#browser)
+    -   [signup](#signup)
+    -   [signin](#signin)
+    -   [signout](#signout)
+    -   [verifyEmail](#verifyemail)
+    -   [starPackage](#starpackage)
+    -   [unstarPackage](#unstarpackage)
+    -   [starRepo](#starrepo)
+    -   [unstarRepo](#unstarrepo)
+    -   [close](#close)
 
 ### PuppeteerGitHub
 
@@ -59,7 +59,7 @@ _Parameters_
 
 * * *
 
-#### PuppeteerGitHub.isAuthenticated
+#### isAuthenticated
 
 Whether or not this instance is authenticated with GitHub.
 
@@ -67,7 +67,7 @@ Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 * * *
 
-#### PuppeteerGitHub.user
+#### user
 
 Authenticated user if authenticated with GitHub.
 
@@ -75,7 +75,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 * * *
 
-#### PuppeteerGitHub.browser
+#### browser
 
 Puppeteer Browser instance to use.
 
@@ -83,7 +83,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.signup
+#### signup
 
 Automates the creation of a new GitHub account.
 
@@ -101,7 +101,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.signin
+#### signin
 
 Signs into an existing GitHub account.
 
@@ -119,7 +119,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.signout
+#### signout
 
 Signs out of the currently authenticated GitHub account.
 
@@ -127,7 +127,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.verifyEmail
+#### verifyEmail
 
 Verifies the authenticated GitHub account's email via pupeteer-email.
 
@@ -141,7 +141,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.starPackage
+#### starPackage
 
 Stars an npm package's github repository.
 
@@ -162,7 +162,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.unstarPackage
+#### unstarPackage
 
 Unstars an npm package's github repository.
 
@@ -174,7 +174,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.starRepo
+#### starRepo
 
 Stars a github repository.
 
@@ -197,7 +197,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.unstarRepo
+#### unstarRepo
 
 Unstars a github repository.
 
@@ -210,7 +210,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 * * *
 
-#### PuppeteerGitHub.close
+#### close
 
 Closes the underlying browser instance, effectively ending this session.
 
