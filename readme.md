@@ -57,20 +57,6 @@ _Parameters_
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
 
-_Examples_
-
-```javascript
-// This example signs into a GitHub account and stars the react repo.
-const PuppeteerGitHub = require('puppeteer-github')
-
-const github = new PuppeteerGitHub()
-
-await github.signin({ username: 'xxx', password: 'xxx' })
-await github.starRepo('facebook/react')
-
-await github.close()
-```
-
 * * *
 
 #### isAuthenticated
