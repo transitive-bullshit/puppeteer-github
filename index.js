@@ -16,6 +16,17 @@ const verifyEmail = require('./lib/verify-email')
  * @param {Object} [opts={ }] - Options
  * @param {Object} [opts.browser] - Puppeteer browser instance to use
  * @param {Object} [opts.puppeteer] - Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
+ *
+ * @example
+ * // This example signs into a GitHub account and stars the react repo.
+ * const PuppeteerGitHub = require('puppeteer-github')
+ *
+ * const github = new PuppeteerGitHub()
+ *
+ * await github.signin({ username: 'xxx', password: 'xxx' })
+ * await github.starRepo('facebook/react')
+ *
+ * await github.close()
  */
 class PuppeteerGitHub {
   constructor (opts = { }) {
