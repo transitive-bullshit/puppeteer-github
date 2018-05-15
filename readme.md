@@ -149,6 +149,8 @@ _Parameters_
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
 _Examples_
 
 ```javascript
@@ -157,8 +159,6 @@ await gh.signin(...)
 await gh.starPackage('react')
 await gh.close()
 ```
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
 * * *
 
@@ -183,6 +183,8 @@ _Parameters_
 -   `repo`  
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
 _Examples_
 
 ```javascript
@@ -192,8 +194,6 @@ await gh.starRepo('avajs/ava')
 await gh.starRepo('https://github.com/facebook/react')
 await gh.close()
 ```
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
 * * *
 
