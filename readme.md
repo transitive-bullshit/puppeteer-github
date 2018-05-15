@@ -39,7 +39,7 @@ await github.close()
 
 ### PuppeteerGitHub
 
-[index.js:20-58](https://github.com/transitive-bullshit/puppeteer-github/blob/9e812ce0a171f379db92ab01d91f4e5fc1d378e9/index.js#L20-L58 "Source code on GitHub")
+[index.js:20-58](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L20-L58 "Source code on GitHub")
 
 [GitHub](https://github.com) automation driven by headless chrome.
 
@@ -53,7 +53,7 @@ _Parameters_
 
 #### isAuthenticated
 
-[index.js:32-32](https://github.com/transitive-bullshit/puppeteer-github/blob/9e812ce0a171f379db92ab01d91f4e5fc1d378e9/index.js#L32-L32 "Source code on GitHub")
+[index.js:32-32](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L32-L32 "Source code on GitHub")
 
 Whether or not this instance is authenticated with GitHub.
 
@@ -63,7 +63,7 @@ Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 #### signup
 
-[index.js:46-57](https://github.com/transitive-bullshit/puppeteer-github/blob/9e812ce0a171f379db92ab01d91f4e5fc1d378e9/index.js#L46-L57 "Source code on GitHub")
+[index.js:46-57](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L46-L57 "Source code on GitHub")
 
 Automates the creation of a new GitHub account.
 
