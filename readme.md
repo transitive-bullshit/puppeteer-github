@@ -49,11 +49,15 @@ await github.close()
 
 ### PuppeteerGitHub
 
-**Parameters**
+[GitHub](https://github.com) automation driven by headless chrome.
+
+_Parameters_
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options (optional, default `{}`)
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
+
+* * *
 
 #### isAuthenticated
 
@@ -61,23 +65,29 @@ Whether or not this instance is authenticated with GitHub.
 
 Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
+* * *
+
 #### user
 
 Authenticated user if authenticated with GitHub.
 
 Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
+* * *
+
 #### browser
 
 Puppeteer Browser instance to use.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** 
+
+* * *
 
 #### signup
 
 Automates the creation of a new GitHub account.
 
-**Parameters**
+_Parameters_
 
 -   `user` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Username
@@ -87,7 +97,9 @@ Automates the creation of a new GitHub account.
     -   `opts.verifyEmail` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Whether or not to verify email
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Email password for verification
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### signin
 
@@ -95,7 +107,7 @@ Signs into an existing GitHub account.
 
 Note: either username or email is required.
 
-**Parameters**
+_Parameters_
 
 -   `user` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Username
@@ -103,35 +115,41 @@ Note: either username or email is required.
     -   `user.password` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Password
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options (optional, default `{}`)
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### signout
 
 Signs out of the currently authenticated GitHub account.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### verifyEmail
 
 Verifies the authenticated GitHub account's email via pupeteer-email.
 
-**Parameters**
+_Parameters_
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Email password for verification
     -   `opts.email` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Email verification (defaults to user's GitHub email)
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### starPackage
 
 Stars an npm package's github repository.
 
-**Parameters**
+_Parameters_
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-**Examples**
+_Examples_
 
 ```javascript
 const gh = new PuppeteerGitHub()
@@ -140,28 +158,32 @@ await gh.starPackage('react')
 await gh.close()
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### unstarPackage
 
 Unstars an npm package's github repository.
 
-**Parameters**
+_Parameters_
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### starRepo
 
 Stars a github repository.
 
-**Parameters**
+_Parameters_
 
--   `repo`
+-   `repo`  
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-**Examples**
+_Examples_
 
 ```javascript
 const gh = new PuppeteerGitHub()
@@ -171,24 +193,30 @@ await gh.starRepo('https://github.com/facebook/react')
 await gh.close()
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### unstarRepo
 
 Unstars a github repository.
 
-**Parameters**
+_Parameters_
 
--   `repo`
+-   `repo`  
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 #### close
 
 Closes the underlying browser instance, effectively ending this session.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+* * *
 
 ## Related
 
