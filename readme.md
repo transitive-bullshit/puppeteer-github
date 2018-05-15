@@ -47,13 +47,11 @@ await github.close()
     -   [unstarRepo](#unstarrepo)
     -   [close](#close)
 
-### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L20-L199)
+### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L20-L199)
 
 [GitHub](https://github.com) automation driven by headless chrome.
 
 Type: `function (opts)`
-
-Parameters:
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options (optional, default `{}`)
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
@@ -61,7 +59,7 @@ Parameters:
 
 * * *
 
-#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L32-L32)
+#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L32-L32)
 
 Whether or not this instance is authenticated with GitHub.
 
@@ -69,7 +67,7 @@ Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 * * *
 
-#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L39-L39)
+#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L39-L39)
 
 Authenticated user if authenticated with GitHub.
 
@@ -77,7 +75,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 * * *
 
-#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L46-L52)
+#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L46-L52)
 
 Puppeteer Browser instance to use.
 
@@ -85,13 +83,11 @@ Type: `function ()`
 
 * * *
 
-#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L66-L77)
+#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L66-L77)
 
 Automates the creation of a new GitHub account.
 
 Type: `function (user, opts): Promise`
-
-Parameters:
 
 -   `user` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Username
@@ -103,15 +99,13 @@ Parameters:
 
 * * *
 
-#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L91-L98)
+#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L91-L98)
 
 Signs into an existing GitHub account.
 
 Note: either username or email is required.
 
 Type: `function (user, opts): Promise`
-
-Parameters:
 
 -   `user` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Username
@@ -121,7 +115,7 @@ Parameters:
 
 * * *
 
-#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L104-L111)
+#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L104-L111)
 
 Signs out of the currently authenticated GitHub account.
 
@@ -129,13 +123,11 @@ Type: `function (): Promise`
 
 * * *
 
-#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L121-L131)
+#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L121-L131)
 
 Verifies the authenticated GitHub account's email via pupeteer-email.
 
 Type: `function (opts): Promise`
-
-Parameters:
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Email password for verification
@@ -143,13 +135,11 @@ Parameters:
 
 * * *
 
-#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L145-L148)
+#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L145-L148)
 
 Stars an npm package's github repository.
 
 Type: `function (pkgName): Promise`
-
-Parameters:
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name
 
@@ -164,25 +154,21 @@ await gh.close()
 
 * * *
 
-#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L156-L159)
+#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L156-L159)
 
 Unstars an npm package's github repository.
 
 Type: `function (pkgName): Promise`
 
-Parameters:
-
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name
 
 * * *
 
-#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L174-L177)
+#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L174-L177)
 
 Stars a github repository.
 
 Type: `function (repo): Promise`
-
-Parameters:
 
 -   `repo` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GitHub repository identifier
 
@@ -198,19 +184,17 @@ await gh.close()
 
 * * *
 
-#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L185-L188)
+#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L185-L188)
 
 Unstars a github repository.
 
 Type: `function (repo): Promise`
 
-Parameters:
-
 -   `repo` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GitHub repository identifier
 
 * * *
 
-#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/c35d36830c5a82e4d1c5e1b9190b55acf41eea4a/index.js#L195-L198)
+#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/5cce5d9e83a664e842d012fd28fdc3cdc322690b/index.js#L195-L198)
 
 Closes the underlying browser instance, effectively ending this session.
 
