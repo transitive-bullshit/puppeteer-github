@@ -6795,9 +6795,9 @@ upath@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.0.5.tgz#02cab9ecebe95bbec6d5fc2566325725ab6d1a73"
 
-update-markdown-jsdoc@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.1.tgz#aa4d8b71e9e74a129255aeed3273a0e7322a08af"
+update-markdown-jsdoc@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.2.tgz#3705b8052f3963bd242d199f7cc686cf02a2bed6"
   dependencies:
     commander "^2.15.1"
     documentation-custom-markdown "^6.3.2"
