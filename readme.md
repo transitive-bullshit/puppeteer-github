@@ -47,7 +47,7 @@ _Parameters_
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
 
-[index.js:20-58](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L20-L58 "Source code on GitHub")
+[index.js:20](https://github.com/transitive-bullshit/puppeteer-github/blob/17de89ba9ed845e629897dc21941dab92436c3d9/index.js#L20-L58 "Source code on GitHub")
 
 * * *
 
@@ -57,7 +57,7 @@ Whether or not this instance is authenticated with GitHub.
 
 Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
-[index.js:32-32](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L32-L32 "Source code on GitHub")
+[index.js:32](https://github.com/transitive-bullshit/puppeteer-github/blob/17de89ba9ed845e629897dc21941dab92436c3d9/index.js#L32-L32 "Source code on GitHub")
 
 * * *
 
@@ -77,7 +77,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:46-57](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L46-L57 "Source code on GitHub")
+[index.js:46](https://github.com/transitive-bullshit/puppeteer-github/blob/17de89ba9ed845e629897dc21941dab92436c3d9/index.js#L46-L57 "Source code on GitHub")
 
 * * *
 
