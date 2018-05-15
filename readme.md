@@ -59,7 +59,7 @@ _Parameters_
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
 
-[index.js:20](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L20-L199 "Source code on GitHub")
+[index.js:20](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L20-L199 "Source code on GitHub")
 
 * * *
 
@@ -69,7 +69,7 @@ Whether or not this instance is authenticated with GitHub.
 
 Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
-[index.js:32](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L32-L32 "Source code on GitHub")
+[index.js:32](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L32-L32 "Source code on GitHub")
 
 * * *
 
@@ -79,7 +79,7 @@ Authenticated user if authenticated with GitHub.
 
 Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-[index.js:39](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L39-L39 "Source code on GitHub")
+[index.js:39](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L39-L39 "Source code on GitHub")
 
 * * *
 
@@ -91,7 +91,7 @@ Type: `function ()`
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** 
 
-[index.js:46](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L46-L52 "Source code on GitHub")
+[index.js:46](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L46-L52 "Source code on GitHub")
 
 * * *
 
@@ -113,7 +113,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:66](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L66-L77 "Source code on GitHub")
+[index.js:66](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L66-L77 "Source code on GitHub")
 
 * * *
 
@@ -135,7 +135,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:91](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L91-L98 "Source code on GitHub")
+[index.js:91](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L91-L98 "Source code on GitHub")
 
 * * *
 
@@ -147,7 +147,7 @@ Type: `function (): Promise`
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:104](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L104-L111 "Source code on GitHub")
+[index.js:104](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L104-L111 "Source code on GitHub")
 
 * * *
 
@@ -165,7 +165,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:121](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L121-L131 "Source code on GitHub")
+[index.js:121](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L121-L131 "Source code on GitHub")
 
 * * *
 
@@ -181,7 +181,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:145](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L145-L148 "Source code on GitHub")
+[index.js:145](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L145-L148 "Source code on GitHub")
 
 _Examples_
 
@@ -206,7 +206,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:156](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L156-L159 "Source code on GitHub")
+[index.js:156](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L156-L159 "Source code on GitHub")
 
 * * *
 
@@ -222,7 +222,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:174](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L174-L177 "Source code on GitHub")
+[index.js:174](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L174-L177 "Source code on GitHub")
 
 _Examples_
 
@@ -248,7 +248,7 @@ _Parameters_
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:185](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L185-L188 "Source code on GitHub")
+[index.js:185](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L185-L188 "Source code on GitHub")
 
 * * *
 
@@ -260,7 +260,7 @@ Type: `function (): Promise`
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-[index.js:195](https://github.com/transitive-bullshit/puppeteer-github/blob/af6e75ad369b24c107f0d1858b5dfebb7b50d2c3/index.js#L195-L198 "Source code on GitHub")
+[index.js:195](https://github.com/transitive-bullshit/puppeteer-github/blob/fdccc5c204d21443b0f1477ccd8d6add3c76b1a4/index.js#L195-L198 "Source code on GitHub")
 
 * * *
 
