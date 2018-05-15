@@ -33,21 +33,21 @@ await github.close()
 
 #### Table of Contents
 
--   [Source code on GitHub](#source-code-on-github)
-    -   [Source code on GitHub](#source-code-on-github-1)
-    -   [Source code on GitHub](#source-code-on-github-2)
-    -   [Source code on GitHub](#source-code-on-github-3)
-    -   [Source code on GitHub](#source-code-on-github-4)
-    -   [Source code on GitHub](#source-code-on-github-5)
-    -   [Source code on GitHub](#source-code-on-github-6)
-    -   [Source code on GitHub](#source-code-on-github-7)
-    -   [Source code on GitHub](#source-code-on-github-8)
-    -   [Source code on GitHub](#source-code-on-github-9)
-    -   [Source code on GitHub](#source-code-on-github-10)
-    -   [Source code on GitHub](#source-code-on-github-11)
-    -   [Source code on GitHub](#source-code-on-github-12)
+-   [PuppeteerGitHub](#puppeteergithub)
+    -   [isAuthenticated](#isauthenticated)
+    -   [user](#user)
+    -   [browser](#browser)
+    -   [signup](#signup)
+    -   [signin](#signin)
+    -   [signout](#signout)
+    -   [verifyEmail](#verifyemail)
+    -   [starPackage](#starpackage)
+    -   [unstarPackage](#unstarpackage)
+    -   [starRepo](#starrepo)
+    -   [unstarRepo](#unstarrepo)
+    -   [close](#close)
 
-### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L20-L199 "Source code on GitHub")
+### [PuppeteerGitHub](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L20-L199)
 
 [GitHub](https://github.com) automation driven by headless chrome.
 
@@ -61,7 +61,7 @@ Parameters:
 
 * * *
 
-#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L32-L32 "Source code on GitHub")
+#### [isAuthenticated](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L32-L32)
 
 Whether or not this instance is authenticated with GitHub.
 
@@ -69,7 +69,7 @@ Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Glob
 
 * * *
 
-#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L39-L39 "Source code on GitHub")
+#### [user](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L39-L39)
 
 Authenticated user if authenticated with GitHub.
 
@@ -77,7 +77,7 @@ Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 * * *
 
-#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L46-L52 "Source code on GitHub")
+#### [browser](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L46-L52)
 
 Puppeteer Browser instance to use.
 
@@ -85,7 +85,7 @@ Type: `function ()`
 
 * * *
 
-#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L66-L77 "Source code on GitHub")
+#### [signup](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L66-L77)
 
 Automates the creation of a new GitHub account.
 
@@ -103,7 +103,7 @@ Parameters:
 
 * * *
 
-#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L91-L98 "Source code on GitHub")
+#### [signin](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L91-L98)
 
 Signs into an existing GitHub account.
 
@@ -121,7 +121,7 @@ Parameters:
 
 * * *
 
-#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L104-L111 "Source code on GitHub")
+#### [signout](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L104-L111)
 
 Signs out of the currently authenticated GitHub account.
 
@@ -129,7 +129,7 @@ Type: `function (): Promise`
 
 * * *
 
-#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L121-L131 "Source code on GitHub")
+#### [verifyEmail](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L121-L131)
 
 Verifies the authenticated GitHub account's email via pupeteer-email.
 
@@ -143,7 +143,7 @@ Parameters:
 
 * * *
 
-#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L145-L148 "Source code on GitHub")
+#### [starPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L145-L148)
 
 Stars an npm package's github repository.
 
@@ -164,7 +164,7 @@ await gh.close()
 
 * * *
 
-#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L156-L159 "Source code on GitHub")
+#### [unstarPackage](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L156-L159)
 
 Unstars an npm package's github repository.
 
@@ -176,7 +176,7 @@ Parameters:
 
 * * *
 
-#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L174-L177 "Source code on GitHub")
+#### [starRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L174-L177)
 
 Stars a github repository.
 
@@ -198,7 +198,7 @@ await gh.close()
 
 * * *
 
-#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L185-L188 "Source code on GitHub")
+#### [unstarRepo](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L185-L188)
 
 Unstars a github repository.
 
@@ -210,7 +210,7 @@ Parameters:
 
 * * *
 
-#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/fc373fc099458f3853b58c7fdc86caaf1e3d1b29/index.js#L195-L198 "Source code on GitHub")
+#### [close](https://github.com/transitive-bullshit/puppeteer-github/blob/f6768aa7d3a7786553e1edbe3d0a3a8ffcae39cb/index.js#L195-L198)
 
 Closes the underlying browser instance, effectively ending this session.
 
