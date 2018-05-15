@@ -39,8 +39,6 @@ await github.close()
 
 ### PuppeteerGitHub
 
-[index.js:20-58](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L20-L58 "Source code on GitHub")
-
 [GitHub](https://github.com) automation driven by headless chrome.
 
 _Parameters_
@@ -49,21 +47,21 @@ _Parameters_
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
 
+[index.js:20-58](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L20-L58 "Source code on GitHub")
+
 * * *
 
 #### isAuthenticated
-
-[index.js:32-32](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L32-L32 "Source code on GitHub")
 
 Whether or not this instance is authenticated with GitHub.
 
 Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
+[index.js:32-32](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L32-L32 "Source code on GitHub")
+
 * * *
 
 #### signup
-
-[index.js:46-57](https://github.com/transitive-bullshit/puppeteer-github/blob/10362f50db7a85b82e2fc3c047b49ed63cbb33b7/index.js#L46-L57 "Source code on GitHub")
 
 Automates the creation of a new GitHub account.
 
@@ -78,6 +76,8 @@ _Parameters_
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Email password for verification
 
 _Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+[index.js:46-57](https://github.com/transitive-bullshit/puppeteer-github/blob/abf16fb3d4914506c363c71b26fc1f059c785ec9/index.js#L46-L57 "Source code on GitHub")
 
 * * *
 
