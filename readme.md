@@ -53,13 +53,13 @@ await github.close()
 
 Type: `function (opts)`
 
-Source: [index.js:20](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L20-L199 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options (optional, default `{}`)
     -   `opts.browser` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer browser instance to use
     -   `opts.puppeteer` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Puppeteer [launch options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions)
+
+Source: [index.js:20](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L20-L199 "Source code on GitHub")
 
 * * *
 
@@ -69,7 +69,7 @@ Whether or not this instance is authenticated with GitHub.
 
 Type: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 
-Source: [index.js:32](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L32-L32 "Source code on GitHub")
+Source: [index.js:32](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L32-L32 "Source code on GitHub")
 
 * * *
 
@@ -79,7 +79,7 @@ Authenticated user if authenticated with GitHub.
 
 Type: [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-Source: [index.js:39](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L39-L39 "Source code on GitHub")
+Source: [index.js:39](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L39-L39 "Source code on GitHub")
 
 * * *
 
@@ -89,9 +89,9 @@ Puppeteer Browser instance to use.
 
 Type: `function ()`
 
-Source: [index.js:46](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L46-L52 "Source code on GitHub")
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** 
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** 
+Source: [index.js:46](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L46-L52 "Source code on GitHub")
 
 * * *
 
@@ -101,9 +101,7 @@ Automates the creation of a new GitHub account.
 
 Type: `function (user, opts): Promise`
 
-Source: [index.js:66](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L66-L77 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `user` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Username
@@ -113,7 +111,9 @@ _Parameters_
     -   `opts.verifyEmail` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** Whether or not to verify email
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Email password for verification
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+Source: [index.js:66](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L66-L77 "Source code on GitHub")
 
 * * *
 
@@ -125,9 +125,7 @@ Note: either username or email is required.
 
 Type: `function (user, opts): Promise`
 
-Source: [index.js:91](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L91-L98 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `user` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** User details for new account
     -   `user.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Username
@@ -135,7 +133,9 @@ _Parameters_
     -   `user.password` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Password
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options (optional, default `{}`)
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+Source: [index.js:91](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L91-L98 "Source code on GitHub")
 
 * * *
 
@@ -145,9 +145,9 @@ Signs out of the currently authenticated GitHub account.
 
 Type: `function (): Promise`
 
-Source: [index.js:104](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L104-L111 "Source code on GitHub")
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Source: [index.js:104](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L104-L111 "Source code on GitHub")
 
 * * *
 
@@ -157,15 +157,15 @@ Verifies the authenticated GitHub account's email via pupeteer-email.
 
 Type: `function (opts): Promise`
 
-Source: [index.js:121](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L121-L131 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `opts` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options
     -   `opts.emailPassword` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Email password for verification
     -   `opts.email` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Email verification (defaults to user's GitHub email)
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+Source: [index.js:121](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L121-L131 "Source code on GitHub")
 
 * * *
 
@@ -175,15 +175,15 @@ Stars an npm package's github repository.
 
 Type: `function (pkgName): Promise`
 
-Source: [index.js:145](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L145-L148 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-_Examples_
+Source: [index.js:145](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L145-L148 "Source code on GitHub")
+
+Examples:
 
 ```javascript
 const gh = new PuppeteerGitHub()
@@ -200,13 +200,13 @@ Unstars an npm package's github repository.
 
 Type: `function (pkgName): Promise`
 
-Source: [index.js:156](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L156-L159 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `pkgName` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** NPM package name.
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+Source: [index.js:156](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L156-L159 "Source code on GitHub")
 
 * * *
 
@@ -216,15 +216,15 @@ Stars a github repository.
 
 Type: `function (repo): Promise`
 
-Source: [index.js:174](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L174-L177 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `repo` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GitHub repository identifier.
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-_Examples_
+Source: [index.js:174](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L174-L177 "Source code on GitHub")
+
+Examples:
 
 ```javascript
 const gh = new PuppeteerGitHub()
@@ -242,13 +242,13 @@ Unstars a github repository.
 
 Type: `function (repo): Promise`
 
-Source: [index.js:185](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L185-L188 "Source code on GitHub")
-
-_Parameters_
+Parameters:
 
 -   `repo` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** GitHub repository identifier.
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+Source: [index.js:185](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L185-L188 "Source code on GitHub")
 
 * * *
 
@@ -258,9 +258,9 @@ Closes the underlying browser instance, effectively ending this session.
 
 Type: `function (): Promise`
 
-Source: [index.js:195](https://github.com/transitive-bullshit/puppeteer-github/blob/ef3252c71abc14dfe8457bfdb967d5b321616955/index.js#L195-L198 "Source code on GitHub")
+Returns: **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
-_Returns_ **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+Source: [index.js:195](https://github.com/transitive-bullshit/puppeteer-github/blob/b92d4744155096c9f2db2aebfcf20dd5bbfe65c5/index.js#L195-L198 "Source code on GitHub")
 
 * * *
 
