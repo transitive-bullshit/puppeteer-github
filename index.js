@@ -133,7 +133,7 @@ class PuppeteerGitHub {
   /**
    * Stars an npm package's github repository.
    *
-   * @param {string} pkgName - NPM package name.
+   * @param {string} pkgName - NPM package name
    * @return {Promise}
    *
    * @example
@@ -150,7 +150,7 @@ class PuppeteerGitHub {
   /**
    * Unstars an npm package's github repository.
    *
-   * @param {string} pkgName - NPM package name.
+   * @param {string} pkgName - NPM package name
    * @return {Promise}
    */
   async unstarPackage (pkgName) {
@@ -161,7 +161,7 @@ class PuppeteerGitHub {
   /**
    * Stars a github repository.
    *
-   * @param {string} repo - GitHub repository identifier.
+   * @param {string} repo - GitHub repository identifier
    * @return {Promise}
    *
    * @example
@@ -179,7 +179,7 @@ class PuppeteerGitHub {
   /**
    * Unstars a github repository.
    *
-   * @param {string} repo - GitHub repository identifier.
+   * @param {string} repo - GitHub repository identifier
    * @return {Promise}
    */
   async unstarRepo (repo) {
