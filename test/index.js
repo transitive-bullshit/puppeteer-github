@@ -2,7 +2,7 @@
 
 const { test } = require('ava')
 
-const PuppeteerGitHub = require('.')
+const PuppeteerGitHub = require('..')
 
 test('basic', (t) => {
   const github = new PuppeteerGitHub()
