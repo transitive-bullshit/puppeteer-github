@@ -1,6 +1,8 @@
 'use strict'
 
+const faker = require('faker')
 const getRepositoryUrl = require('get-repository-url')
+const ow = require('ow')
 const puppeteer = require('puppeteer')
 
 const signup = require('./lib/signup')
@@ -55,9 +57,9 @@ class PuppeteerGitHub {
    * Automates the creation of a new GitHub account.
    *
    * @param {object} user - User details for new account
-   * @param {string} user.username - Username
-   * @param {string} user.email - Email
-   * @param {string} user.password - Password
+   * @param {string} user.email - Email (required)
+   * @param {string} [user.username] - Username
+   * @param {string} [user.password] - Password
    * @param {object} [opts={ }] - Options
    * @param {boolean} [opts.verifyEmail] - Whether or not to verify email
    * @param {string} [opts.emailPassword] - Email password for verification
@@ -65,6 +67,15 @@ class PuppeteerGitHub {
    */
   async signup (user, opts = { }) {
     if (this._isAuthenticated) throw new Error('"signup" requires no authentication')
+    ow(user, ow.object.plain.nonEmpty.label('user'))
+    ow(user.email, ow.string.nonEmpty.label('user.email'))
+
+    user.username = user.username || user.email.split('@')[0].trim().toLowerCase().replace(/\./g, '_')
+    user.password = user.password || faker.internet.password()
+
+    ow(user.username, ow.string.nonEmpty.label('user.username'))
+    ow(user.password, ow.string.nonEmpty.label('user.password'))
+
     const browser = await this.browser()
 
     await signup(browser, user, opts)
@@ -90,6 +101,16 @@ class PuppeteerGitHub {
    */
   async signin (user, opts = { }) {
     if (this._isAuthenticated) throw new Error('"signin" requires no authentication')
+
+    ow(user, ow.object.plain.nonEmpty.label('user'))
+    ow(user.password, ow.string.nonEmpty.label('user.password'))
+
+    if (user.email) {
+      ow(user.email, ow.string.nonEmpty.label('user.email'))
+    } else {
+      ow(user.username, ow.string.nonEmpty.label('user.username'))
+    }
+
     const browser = await this.browser()
 
     await signin(browser, user, opts)
@@ -119,9 +140,8 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async verifyEmail (opts) {
-    if (!opts.emailPassword || !opts.emailPassword.length) {
-      throw new Error('missing required "email-password" for email verification')
-    }
+    ow(opts, ow.object.plain.nonEmpty.label('opts'))
+    ow(opts.emailPassword, ow.string.nonEmpty.label('opts.emailPassword'))
 
     const browser = await this.browser()
     await verifyEmail(browser, {
@@ -143,6 +163,7 @@ class PuppeteerGitHub {
    * await gh.close()
    */
   async starPackage (pkgName) {
+    ow(pkgName, ow.string.nonEmpty.label('pkgName'))
     const url = await getRepositoryUrl(pkgName)
     return this.starRepo(url)
   }
@@ -154,6 +175,7 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async unstarPackage (pkgName) {
+    ow(pkgName, ow.string.nonEmpty.label('pkgName'))
     const url = await getRepositoryUrl(pkgName)
     return this.unstarRepo(url)
   }
@@ -172,6 +194,7 @@ class PuppeteerGitHub {
    * await gh.close()
    */
   async starRepo (repo) {
+    ow(repo, ow.string.nonEmpty.label('repo'))
     const browser = await this.browser()
     return starRepo(browser, repo)
   }
@@ -183,6 +206,7 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async unstarRepo (repo) {
+    ow(repo, ow.string.nonEmpty.label('repo'))
     const browser = await this.browser()
     return unstarRepo(browser, repo)
   }

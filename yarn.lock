@@ -432,6 +432,13 @@ aws4@^1.2.1, aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
+
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -2089,9 +2096,9 @@ doctrine@^2.0.2, doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation-custom-markdown@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/documentation-custom-markdown/-/documentation-custom-markdown-6.3.2.tgz#b13f2cc9f66a4b7f7e6b7864f922a7f79e2ede4f"
+documentation-custom-markdown@^6.3.5:
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/documentation-custom-markdown/-/documentation-custom-markdown-6.3.5.tgz#ac067c6fcbf77a3e02c5b260d4e921f885e7ab1b"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"
@@ -2707,6 +2714,12 @@ fn-name@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
 
+follow-redirects@^1.3.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.1.tgz#67a8f14f5a1f67f962c2c46469c79eaec0a90291"
+  dependencies:
+    debug "^3.1.0"
+
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2870,23 +2883,22 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
-get-pkg@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/get-pkg/-/get-pkg-0.3.0.tgz#79d9d89211eaa4e2e54000ad25ef9eb3635f16e7"
+get-pkg@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/get-pkg/-/get-pkg-1.0.1.tgz#d6372052668501c34f2e96b384eac0c6047f05d3"
   dependencies:
-    min-request "^1.4.1"
+    axios "^0.18.0"
 
 get-port@^3.0.0, get-port@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.2.0.tgz#dd7ce7de187c06c8bf353796ac71e099f0980ebc"
 
-get-repository-url@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/get-repository-url/-/get-repository-url-1.0.1.tgz#db3a736e1d8c36aaed22ca35fc3f8b4098635114"
+get-repository-url@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/get-repository-url/-/get-repository-url-2.0.0.tgz#2f3282be19766995e6735c223d315ac1a48b9aec"
   dependencies:
-    get-pkg "^0.3.0"
-    isobject "^2.1.0"
-    parse-github-url "^0.3.1"
+    get-pkg "^1.0.0"
+    parse-github-url "^1.0.2"
 
 get-stdin@^4.0.1:
   version "4.0.1"
@@ -3758,7 +3770,7 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
-isobject@^2.0.0, isobject@^2.1.0:
+isobject@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
   dependencies:
@@ -4302,10 +4314,6 @@ mime@^2.0.3, mime@^2.2.0:
 mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
-
-min-request@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/min-request/-/min-request-1.4.1.tgz#17634cfb433600d3db3800c697bb696eef8589d2"
 
 minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
@@ -5028,10 +5036,6 @@ parse-git-config@^0.2.0:
   resolved "https://registry.yarnpkg.com/parse-git-config/-/parse-git-config-0.2.0.tgz#272833fdd15fea146fb75d336d236b963b6ff706"
   dependencies:
     ini "^1.3.3"
-
-parse-github-url@^0.3.1:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/parse-github-url/-/parse-github-url-0.3.2.tgz#76ef01ebfe0b1e9c0f493672952cc6a4cd9cb260"
 
 parse-github-url@^1.0.2:
   version "1.0.2"
@@ -6800,12 +6804,12 @@ upath@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.0.5.tgz#02cab9ecebe95bbec6d5fc2566325725ab6d1a73"
 
-update-markdown-jsdoc@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.2.tgz#3705b8052f3963bd242d199f7cc686cf02a2bed6"
+update-markdown-jsdoc@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/update-markdown-jsdoc/-/update-markdown-jsdoc-1.0.6.tgz#9c80dd5cab6809d386206aea0c17a67214cbc77e"
   dependencies:
     commander "^2.15.1"
-    documentation-custom-markdown "^6.3.2"
+    documentation-custom-markdown "^6.3.5"
     execa "^0.10.0"
     node-compat-require "^1.0.3"
     read-pkg-up "^3.0.0"
