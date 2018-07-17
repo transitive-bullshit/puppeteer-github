@@ -1720,14 +1720,6 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
-concat-stream@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
-  dependencies:
-    inherits "^2.0.3"
-    readable-stream "^2.2.2"
-    typedarray "^0.0.6"
-
 concat-stream@1.6.2, concat-stream@^1.5.0, concat-stream@^1.5.2, concat-stream@^1.6.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
@@ -2020,6 +2012,10 @@ delay@^2.0.0:
   resolved "https://registry.yarnpkg.com/delay/-/delay-2.0.0.tgz#9112eadc03e4ec7e00297337896f273bbd91fae5"
   dependencies:
     p-defer "^1.0.0"
+
+delay@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/delay/-/delay-3.0.0.tgz#97fc5c21028e20616e822ab11838c648808534eb"
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -2568,15 +2564,6 @@ extglob@^2.0.4:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
-
-extract-zip@^1.6.5:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/extract-zip/-/extract-zip-1.6.6.tgz#1290ede8d20d0872b429fd3f351ca128ec5ef85c"
-  dependencies:
-    concat-stream "1.6.0"
-    debug "2.6.9"
-    mkdirp "0.5.0"
-    yauzl "2.4.1"
 
 extract-zip@^1.6.6:
   version "1.6.7"
@@ -4388,12 +4375,6 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
-  dependencies:
-    minimist "0.0.8"
-
 mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -4910,6 +4891,10 @@ ow@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/ow/-/ow-0.3.0.tgz#411079ba831edbbe7fc72fb0280dc25dfa39270b"
 
+ow@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ow/-/ow-0.6.0.tgz#1371352713192a8dd54ec13ab0f0f1464b58941f"
+
 p-defer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
@@ -5372,52 +5357,54 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-puppeteer-email-provider-outlook@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/puppeteer-email-provider-outlook/-/puppeteer-email-provider-outlook-0.0.5.tgz#a04db0cebbcad2c1d575d039293579d0836363bf"
+puppeteer-email-provider-outlook@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-email-provider-outlook/-/puppeteer-email-provider-outlook-0.1.0.tgz#98f95fb95d21e907c32cd968b150333b570baa85"
   dependencies:
     delay "^2.0.0"
     faker "^4.1.0"
-    ow "^0.3.0"
+    ow "^0.6.0"
     p-map "^1.2.0"
     parse-email "^1.0.0"
-    puppeteer-email-provider "^0.0.3"
-    puppeteer-email-session "^0.0.3"
+    puppeteer-email-provider "^0.0.5"
+    puppeteer-email-session "^0.0.5"
     tempy "^0.2.1"
 
-puppeteer-email-provider@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/puppeteer-email-provider/-/puppeteer-email-provider-0.0.3.tgz#6ad9f3612aafe8ccb30a685eaeae47b9c59ae0c9"
-
-puppeteer-email-session@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/puppeteer-email-session/-/puppeteer-email-session-0.0.3.tgz#0b814bec8a3ce84abb7760a0df401b2948d4b308"
+puppeteer-email-provider-yahoo@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/puppeteer-email-provider-yahoo/-/puppeteer-email-provider-yahoo-0.0.2.tgz#1d32cb3836f3c022a088149836676f0a959f108d"
   dependencies:
-    ow "^0.3.0"
-    puppeteer-email-provider "^0.0.3"
-
-puppeteer-email@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/puppeteer-email/-/puppeteer-email-0.0.5.tgz#14009d1dfe5241ee11f20523d1c16042fcc12029"
-  dependencies:
+    delay "^2.0.0"
     faker "^4.1.0"
-    ow "^0.3.0"
-    puppeteer "^1.4.0"
-    puppeteer-email-provider "^0.0.3"
-    puppeteer-email-provider-outlook "^0.0.5"
+    ow "^0.6.0"
+    p-map "^1.2.0"
+    parse-email "^1.0.0"
+    puppeteer-email-provider "^0.0.5"
+    puppeteer-email-session "^0.0.5"
+    tempy "^0.2.1"
 
-puppeteer@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.4.0.tgz#437f0f3450d76e437185c0bf06f446e80f184692"
+puppeteer-email-provider@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/puppeteer-email-provider/-/puppeteer-email-provider-0.0.5.tgz#7c9e473544697f90530f98968ac81d6d996be9e6"
+
+puppeteer-email-session@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/puppeteer-email-session/-/puppeteer-email-session-0.0.5.tgz#562df6ad9cdcd53450edefd53a2409df01ef8b6e"
   dependencies:
-    debug "^3.1.0"
-    extract-zip "^1.6.5"
-    https-proxy-agent "^2.1.0"
-    mime "^2.0.3"
-    progress "^2.0.0"
-    proxy-from-env "^1.0.0"
-    rimraf "^2.6.1"
-    ws "^3.0.0"
+    ow "^0.3.0"
+    puppeteer-email-provider "^0.0.5"
+
+puppeteer-email@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-email/-/puppeteer-email-0.1.0.tgz#18603dca953793ced0b3fd2fa07fc56a101bac4c"
+  dependencies:
+    delay "^3.0.0"
+    faker "^4.1.0"
+    ow "^0.6.0"
+    puppeteer "^1.6.0"
+    puppeteer-email-provider "^0.0.5"
+    puppeteer-email-provider-outlook "^0.1.0"
+    puppeteer-email-provider-yahoo "^0.0.2"
 
 puppeteer@^1.6.0:
   version "1.6.0"
@@ -6671,10 +6658,6 @@ uid2@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/uid2/-/uid2-0.0.3.tgz#483126e11774df2f71b8b639dcd799c376162b82"
 
-ultron@~1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
-
 umask@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/umask/-/umask-1.1.0.tgz#f29cebf01df517912bb58ff9c4e50fde8e33320d"
@@ -7127,14 +7110,6 @@ write@^0.2.1:
   resolved "https://registry.yarnpkg.com/write/-/write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757"
   dependencies:
     mkdirp "^0.5.1"
-
-ws@^3.0.0:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.3.tgz#f1cf84fe2d5e901ebce94efaece785f187a228f2"
-  dependencies:
-    async-limiter "~1.0.0"
-    safe-buffer "~5.1.0"
-    ultron "~1.1.0"
 
 ws@^5.1.1:
   version "5.2.2"
