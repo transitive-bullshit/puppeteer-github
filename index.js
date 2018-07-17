@@ -3,7 +3,7 @@
 const faker = require('faker')
 const getRepositoryUrl = require('get-repository-url')
 const ow = require('ow')
-const puppeteer = require('puppeteer')
+const puppeteer = require('puppeteer-extra')
 
 const signup = require('./lib/signup')
 const signin = require('./lib/signin')
@@ -11,6 +11,8 @@ const signout = require('./lib/signout')
 const starRepo = require('./lib/star-repo')
 const unstarRepo = require('./lib/unstar-repo')
 const verifyEmail = require('./lib/verify-email')
+
+puppeteer.use(require('puppeteer-extra-plugin-stealth')())
 
 /**
  * [GitHub](https://github.com) automation driven by headless chrome.
