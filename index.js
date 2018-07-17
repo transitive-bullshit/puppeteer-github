@@ -86,8 +86,8 @@ class PuppeteerGitHub {
     ow(user.password, ow.string.nonEmpty.label('user.password'))
 
     const browser = await this.browser()
-
     await signup(browser, user, opts)
+
     this._isAuthenticated = true
     this._user = user
 
@@ -121,8 +121,8 @@ class PuppeteerGitHub {
     }
 
     const browser = await this.browser()
-
     await signin(browser, user, opts)
+
     this._isAuthenticated = true
     this._user = user
   }
