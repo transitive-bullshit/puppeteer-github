@@ -61,7 +61,7 @@ class PuppeteerGitHub {
    * @param {string} [user.username] - Username
    * @param {string} [user.password] - Password
    * @param {object} [opts={ }] - Options
-   * @param {boolean} [opts.verifyEmail] - Whether or not to verify email
+   * @param {boolean} [opts.verify] - Whether or not to verify email
    * @param {string} [opts.emailPassword] - Email password for verification
    * @return {Promise}
    */
@@ -70,8 +70,17 @@ class PuppeteerGitHub {
     ow(user, ow.object.plain.nonEmpty.label('user'))
     ow(user.email, ow.string.nonEmpty.label('user.email'))
 
-    user.username = user.username || user.email.split('@')[0].trim().toLowerCase().replace(/\./g, '_')
+    user.username = user.username || user.email.split('@')[0]
     user.password = user.password || faker.internet.password()
+
+    user.username = user.username
+      .trim()
+      .toLowerCase()
+      .replace(/[^\d\w-]/g, '-')
+      .replace(/_/g, '-')
+      .replace(/^-/g, '')
+      .replace(/-$/g, '')
+      .replace(/--/g, '-')
 
     ow(user.username, ow.string.nonEmpty.label('user.username'))
     ow(user.password, ow.string.nonEmpty.label('user.password'))
@@ -82,7 +91,7 @@ class PuppeteerGitHub {
     this._isAuthenticated = true
     this._user = user
 
-    if (opts.verifyEmail) {
+    if (opts.verify) {
       await this.verifyEmail(opts)
     }
   }
@@ -218,7 +227,11 @@ class PuppeteerGitHub {
    */
   async close () {
     const browser = await this.browser()
-    return browser.close()
+    await browser.close()
+
+    this._browser = null
+    this._isAuthenticated = false
+    this._user = null
   }
 }
 
