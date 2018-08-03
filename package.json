@@ -34,6 +34,7 @@
     "puppeteer": "^1.6.0",
     "puppeteer-email": "^0.1.0",
     "puppeteer-extra": "^2.0.7",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.0.7",
     "puppeteer-extra-plugin-stealth": "^2.0.7"
   }
 }

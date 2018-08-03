@@ -25,7 +25,6 @@ class PuppeteerGitHub {
   constructor (opts = { }) {
     this._opts = opts
     this._user = null
-    this._isAuthenticated = false
   }
 
   /**
@@ -33,7 +32,7 @@ class PuppeteerGitHub {
    *
    * @member {boolean}
    */
-  get isAuthenticated () { return this._isAuthenticated }
+  get isAuthenticated () { return !!this._user }
 
   /**
    * Authenticated user if authenticated with GitHub.
@@ -68,7 +67,7 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async signup (user, opts = { }) {
-    if (this._isAuthenticated) throw new Error('"signup" requires no authentication')
+    if (this.isAuthenticated) throw new Error('"signup" requires no authentication')
     ow(user, ow.object.plain.nonEmpty.label('user'))
     ow(user.email, ow.string.nonEmpty.label('user.email'))
 
@@ -90,7 +89,6 @@ class PuppeteerGitHub {
     const browser = await this.browser()
     await signup(browser, user, opts)
 
-    this._isAuthenticated = true
     this._user = user
 
     if (opts.verify) {
@@ -111,7 +109,7 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async signin (user, opts = { }) {
-    if (this._isAuthenticated) throw new Error('"signin" requires no authentication')
+    if (this.isAuthenticated) throw new Error('"signin" requires no authentication')
 
     ow(user, ow.object.plain.nonEmpty.label('user'))
     ow(user.password, ow.string.nonEmpty.label('user.password'))
@@ -125,7 +123,6 @@ class PuppeteerGitHub {
     const browser = await this.browser()
     await signin(browser, user, opts)
 
-    this._isAuthenticated = true
     this._user = user
   }
 
@@ -134,16 +131,15 @@ class PuppeteerGitHub {
    * @return {Promise}
    */
   async signout () {
-    if (!this._isAuthenticated) throw new Error('"signout" requires authentication')
+    if (!this.isAuthenticated) throw new Error('"signout" requires authentication')
     const browser = await this.browser()
 
-    await signout(browser)
-    this._isAuthenticated = false
+    await signout(browser, this._user)
     this._user = null
   }
 
   /**
-   * Verifies the authenticated GitHub account's email via pupeteer-email.
+   * Verifies the authenticated GitHub account's email via `puppeteer-email`.
    *
    * @param {Object} opts - Options
    * @param {string} opts.emailPassword - Email password for verification
@@ -232,7 +228,6 @@ class PuppeteerGitHub {
     await browser.close()
 
     this._browser = null
-    this._isAuthenticated = false
     this._user = null
   }
 }
